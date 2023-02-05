@@ -6,21 +6,19 @@ SpamAnalyzer должен конструироваться от массива �
 
 public class SpamAnalyzer extends KeywordAnalyzer {
     private String[] keywords;
+    //private String text;
+
 
     @Override
     protected String[] getKeywords() {
-        return new String[0];
+        return keywords;
     }
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.SPAM;
     }
 
-    @Override
-    public Label processText(String text) {
-        return null;
-    }
 
     //Constructor
     SpamAnalyzer(String[] keywords) {

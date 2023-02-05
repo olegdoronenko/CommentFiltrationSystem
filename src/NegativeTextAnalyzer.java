@@ -7,18 +7,14 @@ public class NegativeTextAnalyzer extends KeywordAnalyzer {
     private String[] negative = {":(", "=( ", ":|"};
     @Override
     protected String[] getKeywords() {
-        return new String[0];
+        return negative;
     }
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.NEGATIVE_TEXT;
     }
 
-    @Override
-    public Label processText(String text) {
-        return null;
-    }
 
     //Constructor
     NegativeTextAnalyzer() {
